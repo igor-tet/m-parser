@@ -13,11 +13,21 @@ parser({
     data: {
         posts: '.posts', //simple usage
         post: {
-            query: '.posts:first',
+            query: ['query1', 'query2'],
             attr: 'href', // if need to return an attribute value
             skip: 10, // 0 by default
             limit: 2,  // all by default
-            first_only: true // to return object not array
+            return_type: 'object', // by default 'array'. Will be return first element
+            formatter: ['trim', 'n', 'special'], // by default all = ['trim', 'n', 'special']
+            fn_formatter: function(v) {
+                return v.replace(/\n/gi, '')
+            },
+            attr_fn_formatter: function(v) {
+                return v.split('#')[0]
+            },
+            filter: function(v) {
+                reutrn v.should_push_or_not
+            }
         }
     },
 }, function succ_cb (r){
