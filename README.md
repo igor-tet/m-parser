@@ -8,10 +8,17 @@ Request is designed to be the simplest way possible to make page scrapping. It s
 var parser = require('m-parser');
 parser({
     url: 'http://google.com',
-    structure: {
+    data: {
         posts: '.posts'
-        first_post: '.posts:first'
+        post: '.posts:first'
     }
     isPhantom: true // or false
+}, function succ_cb (r){
+    var data = r.data
+    console.log('data - ', data);
+    console.log('posts - ', data.posts);
+    console.log('first post - ', data.post);
+}, function error_cb (err){
+    console.log('an error here')
 })
 ```
