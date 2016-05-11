@@ -1,0 +1,32 @@
+{
+  "name": "m-parser",
+  "version": "1.0.2",
+  "description": "Scrap any pages easy",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/igor-tet/m-parser.git"
+  },
+  "keywords": [
+    "parser",
+    "scrapping",
+    "parse"
+  ],
+  "author": "Igor Teterevlev <welcome.novamedia@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/igor-tet/m-parser/issues"
+  },
+  "homepage": "https://github.com/igor-tet/m-parser",
+  "devDependencies": {
+    "chai": "^3.5.0"
+  },
+  "dependencies": {
+    "cheerio": "^0.20.0",
+    "iconv-lite": "^0.4.13",
+    "request": "^2.72.0"
+  }
+}
