@@ -1,4 +1,4 @@
-# m-parser -- an universal module to do scrapping prcess ease
+# m-parser - scrap any pages easy
 
 ## Super simple to use
 
