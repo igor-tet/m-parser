@@ -26,7 +26,7 @@ parser({
                 return v.split('#')[0]
             },
             filter: function(v) {
-                reutrn v.should_push_or_not
+                return v.should_push_or_not
             }
         }
     },
